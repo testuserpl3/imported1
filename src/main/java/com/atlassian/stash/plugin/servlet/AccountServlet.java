@@ -5,22 +5,19 @@ import com.atlassian.soy.renderer.SoyTemplateRenderer;
 import com.atlassian.stash.user.StashUser;
 import com.atlassian.stash.user.UserService;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import javax.servlet.*;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 
-public class ProfileServlet extends HttpServlet {
+public class AccountServlet extends HttpServlet {
     private final SoyTemplateRenderer soyTemplateRenderer;
     private final UserService userService;
 
-    public ProfileServlet(SoyTemplateRenderer soyTemplateRenderer, UserService userService) {
+    public AccountServlet(SoyTemplateRenderer soyTemplateRenderer, UserService userService) {
         this.soyTemplateRenderer = soyTemplateRenderer;
         this.userService = userService;
     }
@@ -38,7 +35,7 @@ public class ProfileServlet extends HttpServlet {
             return;
         }
 
-        render(resp, "plugin.profileExample.profile", ImmutableMap.<String, Object>of("user", user));
+        render(resp, "plugin.profileExample.account", ImmutableMap.<String, Object>of("user", user));
     }
 
     private void render(HttpServletResponse resp, String templateName, Map<String, Object> data) throws IOException, ServletException {
