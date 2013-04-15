@@ -1,4 +1,19 @@
+# User account plugin tutorials
+
 This is the Atlassian Stash example plugin for decorating a User profile and account pages.
+
+## User profile decorator
+
+[User profile tutorial](https://developer.atlassian.com/stash/docs/latest/tutorials-and-examples/decorating-the-user-profile.html) – add content to the user profile page.
+
+![profile](http://monosnap.com/image/UgHGsxIqvla4qAk0QjH0mk4yW.png)
+
+## User account decorator
+
+[User account tutorial](https://developer.atlassian.com/stash/docs/latest/tutorials-and-examples/decorating-the-user-account.html) – add content to the user account page.
+
+![account](http://monosnap.com/image/3H2wXG7QHSr39FpnFbDpwnS8A.png)
+
 
 ----
 
