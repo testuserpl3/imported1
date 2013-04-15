@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    </plugin-info>
+
+    <!-- import from the product container -->
+    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties"/>
+
+    <servlet name="Profile Servlet" i18n-name-key="profile-servlet.name" key="profile-servlet"
+             class="com.atlassian.stash.plugin.servlet.ProfileServlet">
+        <description key="profile-servlet.description">The Profile Servlet Plugin</description>
+        <url-pattern>/profile/users/*</url-pattern>
+    </servlet>
+
+    <component-import key="soyTemplateRenderer" interface="com.atlassian.soy.renderer.SoyTemplateRenderer" filter=""/>
+    <component-import key="userManager" interface="com.atlassian.sal.api.user.UserManager" filter=""/>
+
+    <stash-resource key="profile-soy" name="Profile Tab Soy Templates">
+        <directory location="/templates/" />
+    </stash-resource>
+
+    <web-item key="profile-plugin-tab" name="Profile navigation tab" section="stash.user.profile.secondary.tabs" weight="20">
+        <label key="profile.plugin.tab">My Plugin</label>
+        <link>/plugins/servlet/profile/users/${profileUser.name}</link>
+        <tooltip key="profile.plugin.tab.description">Hooray, we have a tab!</tooltip>
+    </web-item>
+
+</atlassian-plugin>
