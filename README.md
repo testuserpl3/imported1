@@ -1,4 +1,6 @@
-You have successfully created an Atlassian Plugin!
+This is the Atlassian Stash example plugin for decorating a User profile and account pages.
+
+----
 
 Here are the SDK commands you'll use immediately:
 
