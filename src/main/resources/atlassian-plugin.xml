@@ -31,7 +31,7 @@
 
     <web-item key="profile-plugin-tab" name="Profile navigation tab" section="stash.user.profile.secondary.tabs" weight="20">
         <label key="profile.plugin.tab">My Plugin</label>
-        <link>/plugins/servlet/profileExample/users/${profileUser.name}</link>
+        <link>/plugins/servlet/profileExample/profile/${profileUser.name}</link>
         <tooltip key="profile.plugin.tab.description">Hooray, we have a tab!</tooltip>
     </web-item>
 
