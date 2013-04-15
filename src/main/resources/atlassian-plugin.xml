@@ -30,13 +30,13 @@
     </stash-resource>
 
     <web-item key="profile-plugin-tab" name="Profile navigation tab" section="stash.user.profile.secondary.tabs" weight="20">
-        <label key="profile.plugin.tab">My Plugin</label>
+        <label key="profile.plugin.tab">My plugin</label>
         <link>/plugins/servlet/profileExample/profile/${profileUser.name}</link>
         <tooltip key="profile.plugin.tab.description">Hooray, we have a tab!</tooltip>
     </web-item>
 
-    <web-item key="account-plugin-tab" name="Account navigation tab" section="stash.user.account.nav" weight="50">
-        <label key="account.plugin.tab">My Plugin</label>
+    <web-item key="account-plugin-tab" name="Account navigation tab" section="stash.user.account.nav" weight="100">
+        <label key="account.plugin.tab">My plugin</label>
         <link>/plugins/servlet/profileExample/account/${accountUser.name}</link>
         <tooltip key="account.plugin.tab.description">Hooray, we have a tab!</tooltip>
     </web-item>
