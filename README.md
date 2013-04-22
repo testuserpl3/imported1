@@ -6,6 +6,8 @@ This is the Atlassian Stash example plugin for decorating various pages around S
 
 Add a tab with content to the project page.
 
+![project](http://monosnap.com/image/2fjKPfHnS29rilBsRgXijJBIq.png)
+
 ## User profile decorator
 
 [User profile tutorial](https://developer.atlassian.com/stash/docs/latest/tutorials-and-examples/decorating-the-user-profile.html) – add content to the user profile page.

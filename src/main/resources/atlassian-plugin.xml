@@ -35,7 +35,7 @@
         <directory location="/templates/" />
     </stash-resource>
 
-    <web-item key="project-plugin-tab" name="Project navigation tab" section="atl.project.nav" weight="20">
+    <web-item key="project-plugin-tab" name="Project navigation tab" section="atl.project.nav" weight="35">
         <label key="project.plugin.tab">My plugin</label>
         <link>/plugins/servlet/example/project/${project.key}</link>
         <tooltip key="example.project.plugin.tab.description">Hooray, we have a tab!</tooltip>
