@@ -1,6 +1,10 @@
-# User account plugin tutorials
+# Stash plugin decorating tutorials
 
-This is the Atlassian Stash example plugin for decorating a User profile and account pages.
+This is the Atlassian Stash example plugin for decorating various pages around Stash.
+
+## Project decorator
+
+Add a tab with content to the project page.
 
 ## User profile decorator
 
