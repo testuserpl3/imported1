@@ -1,4 +1,22 @@
-{namespace plugin.profileExample}
+{namespace plugin.example}
+
+/**
+ * @param project Project object
+ */
+{template .project}
+<html>
+<head>
+    <meta name="decorator" content="stash.project.general">
+    <meta name="projectKey" content="{$project.key}">
+    <meta name="activeTab" content="profile-plugin-tab">
+    <title>{$project.key} / Example Tab</title>
+</head>
+<body>
+    <h3>Project: {$project.key}</h3>
+    <p>Welcome to my plugin tab in the project page.</p>
+</body>
+</html>
+{/template}
 
 /**
  * @param user StashUser object which is in the context provided by ProfileServlet

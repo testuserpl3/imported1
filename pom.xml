@@ -3,14 +3,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.atlassian.stash.plugin</groupId>
-    <artifactId>stash-profile-plugin</artifactId>
+    <artifactId>stash-example-plugin</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <organization>
         <name>Atlassian</name>
         <url>http://www.atlassian.com/stash</url>
     </organization>
     <name>stash-profile-plugin</name>
-    <description>This is an example plugin decorating the user profile and account page in Stash.</description>
+    <description>This is an example plugin decorating the various page around Stash.</description>
     <packaging>atlassian-plugin</packaging>
     <dependencyManagement>
         <dependencies>

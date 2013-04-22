@@ -38,14 +38,14 @@ public class ProfileServlet extends HttpServlet {
             return;
         }
 
-        render(resp, "plugin.profileExample.profile", ImmutableMap.<String, Object>of("user", user));
+        render(resp, "plugin.example.profile", ImmutableMap.<String, Object>of("user", user));
     }
 
     private void render(HttpServletResponse resp, String templateName, Map<String, Object> data) throws IOException, ServletException {
         resp.setContentType("text/html;charset=UTF-8");
         try {
             soyTemplateRenderer.render(resp.getWriter(),
-                    "com.atlassian.stash.plugin.stash-profile-plugin:profile-soy",
+                    "com.atlassian.stash.plugin.stash-example-plugin:example-soy",
                     templateName,
                     data);
         } catch (SoyException e) {

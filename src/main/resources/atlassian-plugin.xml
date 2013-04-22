@@ -10,34 +10,46 @@
     <!-- import from the product container -->
     <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties"/>
 
+    <servlet name="Project Servlet" i18n-name-key="project-servlet.name" key="project-servlet"
+             class="com.atlassian.stash.plugin.servlet.ProjectServlet">
+        <description key="project-servlet.description">The Project Servlet Plugin</description>
+        <url-pattern>/example/project/*</url-pattern>
+    </servlet>
+
     <servlet name="Profile Servlet" i18n-name-key="profile-servlet.name" key="profile-servlet"
              class="com.atlassian.stash.plugin.servlet.ProfileServlet">
         <description key="profile-servlet.description">The Profile Servlet Plugin</description>
-        <url-pattern>/profileExample/profile/*</url-pattern>
+        <url-pattern>/example/profile/*</url-pattern>
     </servlet>
 
     <servlet name="Account Servlet" i18n-name-key="account-servlet.name" key="account-servlet"
              class="com.atlassian.stash.plugin.servlet.AccountServlet">
         <description key="profile-servlet.description">The Account Servlet Plugin</description>
-        <url-pattern>/profileExample/account/*</url-pattern>
+        <url-pattern>/example/account/*</url-pattern>
     </servlet>
 
     <component-import key="soyTemplateRenderer" interface="com.atlassian.soy.renderer.SoyTemplateRenderer" filter=""/>
     <component-import key="userManager" interface="com.atlassian.sal.api.user.UserManager" filter=""/>
 
-    <stash-resource key="profile-soy" name="Profile Tab Soy Templates">
+    <stash-resource key="example-soy" name="Example Soy Templates">
         <directory location="/templates/" />
     </stash-resource>
 
+    <web-item key="project-plugin-tab" name="Project navigation tab" section="atl.project.nav" weight="20">
+        <label key="project.plugin.tab">My plugin</label>
+        <link>/plugins/servlet/example/project/${project.key}</link>
+        <tooltip key="example.project.plugin.tab.description">Hooray, we have a tab!</tooltip>
+    </web-item>
+
     <web-item key="profile-plugin-tab" name="Profile navigation tab" section="stash.user.profile.secondary.tabs" weight="20">
         <label key="profile.plugin.tab">My plugin</label>
-        <link>/plugins/servlet/profileExample/profile/${profileUser.name}</link>
+        <link>/plugins/servlet/example/profile/${profileUser.name}</link>
         <tooltip key="profile.plugin.tab.description">Hooray, we have a tab!</tooltip>
     </web-item>
 
     <web-item key="account-plugin-tab" name="Account navigation tab" section="stash.user.account.nav" weight="100">
         <label key="account.plugin.tab">My plugin</label>
-        <link>/plugins/servlet/profileExample/account/${accountUser.name}</link>
+        <link>/plugins/servlet/example/account/${accountUser.name}</link>
         <tooltip key="account.plugin.tab.description">Hooray, we have a tab!</tooltip>
     </web-item>
 

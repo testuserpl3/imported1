@@ -2,6 +2,8 @@ package com.atlassian.stash.plugin.servlet;
 
 import com.atlassian.soy.renderer.SoyException;
 import com.atlassian.soy.renderer.SoyTemplateRenderer;
+import com.atlassian.stash.project.Project;
+import com.atlassian.stash.project.ProjectService;
 import com.atlassian.stash.user.StashUser;
 import com.atlassian.stash.user.UserService;
 import com.google.common.collect.ImmutableMap;
@@ -13,29 +15,29 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 
-public class AccountServlet extends HttpServlet {
+public class ProjectServlet extends HttpServlet {
     private final SoyTemplateRenderer soyTemplateRenderer;
-    private final UserService userService;
+    private final ProjectService projectService;
 
-    public AccountServlet(SoyTemplateRenderer soyTemplateRenderer, UserService userService) {
+    public ProjectServlet(SoyTemplateRenderer soyTemplateRenderer, ProjectService projectService) {
         this.soyTemplateRenderer = soyTemplateRenderer;
-        this.userService = userService;
+        this.projectService = projectService;
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // Get userSlug from path
+        // Get projectKey from path
         String pathInfo = req.getPathInfo();
 
-        String userSlug = pathInfo.substring(1); // Strip leading slash
-        StashUser user = userService.getUserBySlug(userSlug);
+        String projectKey = pathInfo.substring(1); // Strip leading slash
+        Project project = projectService.getByKey(projectKey);
 
-        if (user == null) {
+        if (project == null) {
             resp.sendError(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
 
-        render(resp, "plugin.example.account", ImmutableMap.<String, Object>of("user", user));
+        render(resp, "plugin.example.project", ImmutableMap.<String, Object>of("project", project));
     }
 
     private void render(HttpServletResponse resp, String templateName, Map<String, Object> data) throws IOException, ServletException {
