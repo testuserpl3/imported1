@@ -2,11 +2,27 @@
 
 This is the Atlassian Stash example plugin for decorating various pages around Stash.
 
+----
+
 ## Project decorator
 
 Add a tab with content to the project page.
 
 ![project](http://monosnap.com/image/2fjKPfHnS29rilBsRgXijJBIq.png)
+
+----
+
+## Repository decorator
+
+Add a tab with content to the repository page.
+
+![repo](http://monosnap.com/image/BheKzc2xg5gqOdttSzRIu7wqF.png)
+
+Repository settings page
+
+![repo-settings](http://monosnap.com/image/84y7RaMcD542Jj7iRRenwjPWs.png)
+
+----
 
 ## User profile decorator
 
@@ -14,12 +30,13 @@ Add a tab with content to the project page.
 
 ![profile](http://monosnap.com/image/UgHGsxIqvla4qAk0QjH0mk4yW.png)
 
+----
+
 ## User account decorator
 
 [User account tutorial](https://developer.atlassian.com/stash/docs/latest/tutorials-and-examples/decorating-the-user-account.html) – add content to the user account page.
 
 ![account](http://monosnap.com/image/3H2wXG7QHSr39FpnFbDpwnS8A.png)
-
 
 ----
 

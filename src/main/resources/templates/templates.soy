@@ -19,6 +19,45 @@
 {/template}
 
 /**
+ * @param repository Repository object
+ */
+{template .repository}
+<html>
+<head>
+    <meta name="decorator" content="stash.repository.general">
+    <meta name="projectKey" content="{$repository.project.key}">
+    <meta name="repositorySlug" content="{$repository.slug}">
+    <meta name="activeTab" content="repository-plugin-tab">
+    <title>{$repository.slug} / Example Tab</title>
+</head>
+<body>
+    <h3>Repository: {$repository.slug}</h3>
+    <p>Welcome to my plugin tab in the repository page.</p>
+</body>
+</html>
+{/template}
+
+
+/**
+ * @param repository Repository object
+ */
+{template .repositorySettings}
+<html>
+<head>
+    <meta name="decorator" content="stash.repository.settings">
+    <meta name="projectKey" content="{$repository.project.key}">
+    <meta name="repositorySlug" content="{$repository.slug}">
+    <meta name="activeTab" content="repository-settings-plugin-tab">
+    <title>{$repository.slug} / Example Tab</title>
+</head>
+<body>
+    <h3>Repository: {$repository.slug}</h3>
+    <p>Welcome to my plugin tab in the repository settings page.</p>
+</body>
+</html>
+{/template}
+
+/**
  * @param user StashUser object which is in the context provided by ProfileServlet
  */
 {template .profile}
