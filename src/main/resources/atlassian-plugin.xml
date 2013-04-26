@@ -21,8 +21,14 @@
 
     <servlet name="Repository Servlet" key="repository-servlet"
              class="com.atlassian.stash.plugin.servlet.RepositoryServlet">
-        <description key="project-servlet.description">The Project Servlet Plugin</description>
+        <description key="repository-servlet.description">The Repository Servlet Plugin</description>
         <url-pattern>/example/repository/*</url-pattern>
+    </servlet>
+
+    <servlet name="Pull Request Servlet" key="pull-request-servlet"
+             class="com.atlassian.stash.plugin.servlet.PullRequestServlet">
+        <description key="pull-request-servlet.description">The Pull Request Servlet Plugin</description>
+        <url-pattern>/example/pull-request/*</url-pattern>
     </servlet>
 
     <servlet name="Profile Servlet" key="profile-servlet" class="com.atlassian.stash.plugin.servlet.ProfileServlet">
@@ -55,6 +61,13 @@
               section="stash.repository.settings.panel/repository-settings-section" weight="50">
         <label>My plugin</label>
         <link>/plugins/servlet/example/repository/${repository.project.key}/${repository.slug}/settings</link>
+        <tooltip>Hooray, we have a tab!</tooltip>
+    </web-item>
+
+    <web-item key="pull-request-plugin-tab" name="Pull Request navigation tab"
+              section="stash.pull-request.nav" weight="50">
+        <label>My plugin</label>
+        <link>/plugins/servlet/example/pull-request/${pullRequest.toRef.repository.project.key}/${pullRequest.toRef.repository.slug}/${pullRequest.id}</link>
         <tooltip>Hooray, we have a tab!</tooltip>
     </web-item>
 

@@ -58,6 +58,26 @@
 {/template}
 
 /**
+ * @param pullRequest PullRequest object
+ */
+{template .pullRequest}
+<html>
+<head>
+    <meta name="decorator" content="stash.pullrequest.view">
+    <meta name="projectKey" content="{$pullRequest.toRef.repository.project.key}">
+    <meta name="repositorySlug" content="{$pullRequest.toRef.repository.slug}">
+    <meta name="pullRequestId" content="{$pullRequest.id}">
+    <meta name="activeTab" content="pull-request-plugin-tab">
+    <title>{$pullRequest.toRef.repository.slug}-{$pullRequest.id} / Example Tab</title>
+</head>
+<body>
+    <h3>Pull Request: {$pullRequest.id}</h3>
+    <p>Welcome to my plugin tab in the pull request page.</p>
+</body>
+</html>
+{/template}
+
+/**
  * @param user StashUser object which is in the context provided by ProfileServlet
  */
 {template .profile}
