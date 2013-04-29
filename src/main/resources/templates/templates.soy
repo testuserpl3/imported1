@@ -19,6 +19,24 @@
 {/template}
 
 /**
+ * @param project Project object
+ */
+{template .projectSettings}
+<html>
+<head>
+    <meta name="decorator" content="stash.project.settings">
+    <meta name="projectKey" content="{$project.key}">
+    <meta name="activeTab" content="project-settings-plugin-tab">
+    <title>{$project.key} / Example Tab</title>
+</head>
+<body>
+    <h3>Project: {$project.key}</h3>
+    <p>Welcome to my plugin tab in the project settings page.</p>
+</body>
+</html>
+{/template}
+
+/**
  * @param repository Repository object
  */
 {template .repository}

@@ -23,14 +23,27 @@ public class ProjectServlet extends AbstractExampleServlet {
         // Get projectKey from path
         String pathInfo = req.getPathInfo();
 
-        String projectKey = pathInfo.substring(1); // Strip leading slash
-        Project project = projectService.getByKey(projectKey);
+        String[] components = pathInfo.split("/");
+
+        if (components.length < 2) {
+            resp.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return;
+        }
+
+        Project project = projectService.getByKey(components[1]);
 
         if (project == null) {
             resp.sendError(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
 
-        render(resp, "plugin.example.project", ImmutableMap.<String, Object>of("project", project));
+        boolean isSettings = false;
+        if (components.length == 3 && "settings".equalsIgnoreCase(components[2])) {
+            isSettings = true;
+        }
+
+        String template = isSettings ? "plugin.example.projectSettings" : "plugin.example.project";
+
+        render(resp, template, ImmutableMap.<String, Object>of("project", project));
     }
 }

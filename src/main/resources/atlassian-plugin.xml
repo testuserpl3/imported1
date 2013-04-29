@@ -51,6 +51,12 @@
         <tooltip>Hooray, we have a tab!</tooltip>
     </web-item>
 
+    <web-item key="project-settings-plugin-tab" name="Project settings navigation tab" section="stash.project.settings.panel" weight="20">
+        <label>My plugin</label>
+        <link>/plugins/servlet/example/project/${project.key}/settings</link>
+        <tooltip>Hooray, we have a tab!</tooltip>
+    </web-item>
+
     <web-item key="repository-plugin-tab" name="Repository navigation tab" section="stash.repository.nav" weight="30">
         <label>My plugin</label>
         <link>/plugins/servlet/example/repository/${repository.project.key}/${repository.slug}</link>
