@@ -1,14 +1,16 @@
 # Stash plugin decorating tutorials
 
 This is the Atlassian Stash example plugin for decorating various pages around Stash.
+See the [Stash developer documentation](https://developer.atlassian.com/stash/docs/3.0.1/reference/plugin-decorators.html)
+for a list of the available decorators in Stash 3.x.
 
 ----
 
 ## Project decorator
 
-Add a tab with content to the project page.
+Add a tab with content to the project page (see [STASH-7380](https://jira.atlassian.com/browse/STASH-7380) for the bug affecting this decorator in Stash 3.x).
 
-![project](http://monosnap.com/image/2fjKPfHnS29rilBsRgXijJBIq.png)
+![project](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/project-decorator.png)
 
 ----
 
@@ -16,11 +18,11 @@ Add a tab with content to the project page.
 
 Add a tab with content to the repository page.
 
-![repo](http://monosnap.com/image/BheKzc2xg5gqOdttSzRIu7wqF.png)
+![repo](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/repository-decorator.png)
 
 Repository settings page
 
-![repo-settings](http://monosnap.com/image/84y7RaMcD542Jj7iRRenwjPWs.png)
+![repo-settings](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/repository-settings-decorator.png)
 
 ----
 
@@ -28,7 +30,7 @@ Repository settings page
 
 [User profile tutorial](https://developer.atlassian.com/stash/docs/latest/tutorials-and-examples/decorating-the-user-profile.html) – add content to the user profile page.
 
-![profile](http://monosnap.com/image/UgHGsxIqvla4qAk0QjH0mk4yW.png)
+![profile](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/user-profile-decorator.png)
 
 ----
 
@@ -36,7 +38,7 @@ Repository settings page
 
 [User account tutorial](https://developer.atlassian.com/stash/docs/latest/tutorials-and-examples/decorating-the-user-account.html) – add content to the user account page.
 
-![account](http://monosnap.com/image/3H2wXG7QHSr39FpnFbDpwnS8A.png)
+![account](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/user-profile-decorator.png)
 
 ----
 

@@ -49,6 +49,8 @@
         <label>My plugin</label>
         <link>/plugins/servlet/example/project/${project.key}</link>
         <tooltip>Hooray, we have a tab!</tooltip>
+        <!-- optional style for the icon: see https://design.atlassian.com/2.0/product/foundations/iconography for a list of available images -->
+        <param name="stashIconClass" value="aui-icon-small aui-iconfont-edit" />
     </web-item>
 
     <web-item key="project-settings-plugin-tab" name="Project settings navigation tab" section="stash.project.settings.panel" weight="20">
@@ -57,10 +59,12 @@
         <tooltip>Hooray, we have a tab!</tooltip>
     </web-item>
 
-    <web-item key="repository-plugin-tab" name="Repository navigation tab" section="stash.repository.nav" weight="30">
+    <web-item key="repository-plugin-tab" name="Repository navigation tab" section="stash.repository.nav" weight="50">
         <label>My plugin</label>
         <link>/plugins/servlet/example/repository/${repository.project.key}/${repository.slug}</link>
         <tooltip>Hooray, we have a tab!</tooltip>
+        <!-- optional style for the icon: see https://design.atlassian.com/2.0/product/foundations/iconography for a list of available images -->
+        <param name="stashIconClass" value="aui-icon-small aui-iconfont-edit" />
     </web-item>
 
     <web-item key="repository-settings-plugin-tab" name="Repository settings navigation tab"

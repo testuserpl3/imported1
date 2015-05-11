@@ -44,7 +44,7 @@ public class PullRequestServlet extends AbstractExampleServlet {
         PullRequest pullRequest;
         try {
             int pullRequestId = Integer.parseInt(components[3]);
-            pullRequest = pullRequestService.findById(repository.getId(), pullRequestId);
+            pullRequest = pullRequestService.getById(repository.getId(), pullRequestId);
         } catch (NumberFormatException e) {
             resp.sendError(HttpServletResponse.SC_NOT_FOUND);
             return;
